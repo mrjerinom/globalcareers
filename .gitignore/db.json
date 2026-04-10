@@ -1,0 +1,11 @@
+{
+  "jobs": [],
+  "applicants": [],
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "$2a$10$ISUt6GsqhzKgXUTqXaVo4.rdq9FSeLaus5wt/bwiSCIsFsQ1nMlfS"
+    }
+  ]
+}

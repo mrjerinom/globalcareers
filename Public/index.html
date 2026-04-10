@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Careers India – Jobs in Africa & Jamaica</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #FF6B00;
+    --saffron-light: #FF8C3A;
+    --deep: #1A0A00;
+    --navy: #0D1B2A;
+    --green: #00A878;
+    --green-dark: #007A58;
+    --cream: #FFF8F0;
+    --gray: #6B7280;
+    --light: #F3F4F6;
+    --white: #FFFFFF;
+    --border: #E5E7EB;
+    --shadow: 0 4px 24px rgba(255,107,0,0.12);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.15);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito', sans-serif; background: var(--white); color: var(--deep); overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--saffron);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.9rem 5%; box-shadow: 0 2px 20px rgba(255,107,0,0.1);
+  }
+  .nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+  .nav-logo-icon { width: 40px; height: 40px; background: var(--saffron); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--deep); line-height: 1.1; }
+  .nav-logo-text span { color: var(--saffron); }
+  .nav-logo-sub { font-size: 0.6rem; font-weight: 600; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; display: block; }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: 0.88rem; font-weight: 700; color: var(--deep); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--saffron); }
+  .nav-btn { background: var(--saffron); color: white; border: none; padding: 0.6rem 1.4rem; border-radius: 50px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.85rem; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+  .nav-btn:hover { background: var(--saffron-light); transform: translateY(-1px); }
+
+  .hero { min-height: 100vh; background: linear-gradient(135deg, var(--navy) 0%, #0a2540 50%, #1a3a2a 100%); display: flex; align-items: center; padding: 7rem 5% 5rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(255,107,0,0.15) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(0,168,120,0.12) 0%, transparent 50%); }
+  .hero-pattern { position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,107,0,0.03) 40px, rgba(255,107,0,0.03) 41px); }
+  .hero-content { position: relative; z-index: 1; max-width: 700px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0,168,120,0.2); border: 1px solid rgba(0,168,120,0.4); color: #4DD9AC; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem; animation: fadeDown 0.6s ease forwards; }
+  .hero-badge::before { content: '✓'; font-size: 0.7rem; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; color: white; line-height: 1.1; margin-bottom: 1.2rem; animation: fadeUp 0.7s 0.1s ease both; }
+  .hero-title .accent { color: var(--saffron); }
+  .hero-title .green { color: #4DD9AC; }
+  .hero-sub { font-size: 1.1rem; font-weight: 600; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 2.5rem; animation: fadeUp 0.7s 0.2s ease both; }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; animation: fadeUp 0.7s 0.3s ease both; }
+  .pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; }
+  .pill.orange { background: rgba(255,107,0,0.2); border-color: rgba(255,107,0,0.5); color: #FFB380; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.4s ease both; }
+  .btn-big { padding: 0.9rem 2.2rem; border-radius: 50px; font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800; cursor: pointer; text-decoration: none; border: none; transition: all 0.25s; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .btn-big.primary { background: var(--saffron); color: white; box-shadow: 0 4px 20px rgba(255,107,0,0.4); }
+  .btn-big.primary:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(255,107,0,0.5); }
+  .btn-big.outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.4); }
+  .btn-big.outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+  .hero-trust { margin-top: 3rem; display: flex; gap: 2.5rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.5s ease both; }
+  .trust-item { text-align: center; }
+  .trust-num { font-size: 1.8rem; font-weight: 900; color: var(--saffron); display: block; line-height: 1; }
+  .trust-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .ps-section { padding: 6rem 5%; background: var(--cream); }
+  .section-tag { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--saffron); margin-bottom: 0.8rem; display: block; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; }
+  .ps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
+  .ps-card { padding: 2.5rem; border-radius: 16px; position: relative; overflow: hidden; }
+  .ps-card.problem { background: linear-gradient(135deg, #1a0a00, #2d1200); color: white; }
+  .ps-card.solution { background: linear-gradient(135deg, #003d2a, #005c40); color: white; }
+  .ps-icon { font-size: 2.5rem; margin-bottom: 1.2rem; display: block; }
+  .ps-card-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; }
+  .ps-card.problem .ps-card-title { color: #FF8C3A; }
+  .ps-card.solution .ps-card-title { color: #4DD9AC; }
+  .ps-card p { font-size: 0.97rem; line-height: 1.7; opacity: 0.9; }
+  .ps-list { list-style: none; margin-top: 1rem; }
+  .ps-list li { padding: 0.4rem 0; font-size: 0.93rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+  .ps-list li::before { content: '→'; color: var(--saffron-light); flex-shrink: 0; }
+  .ps-card.solution .ps-list li::before { content: '✓'; color: #4DD9AC; }
+
+  .industries { padding: 6rem 5%; background: white; }
+  .industries-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.2rem; margin-top: 3rem; }
+  .industry-card { border: 2px solid var(--border); border-radius: 16px; padding: 2rem 1rem; text-align: center; cursor: default; transition: all 0.3s; }
+  .industry-card:hover { border-color: var(--saffron); transform: translateY(-4px); box-shadow: var(--shadow); }
+  .industry-card .ic-icon { font-size: 2.2rem; display: block; margin-bottom: 0.8rem; }
+  .industry-card .ic-name { font-size: 0.9rem; font-weight: 700; color: var(--deep); }
+
+  .why-us { padding: 6rem 5%; background: var(--navy); color: white; }
+  .why-us .section-title { color: white; }
+  .why-us .section-title span { color: var(--saffron); }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+  .why-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem; transition: background 0.3s, transform 0.3s; }
+  .why-card:hover { background: rgba(255,107,0,0.1); border-color: rgba(255,107,0,0.3); transform: translateY(-3px); }
+  .why-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+  .why-title { font-weight: 800; font-size: 1.05rem; margin-bottom: 0.6rem; color: white; }
+  .why-desc { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
+  .openings { padding: 6rem 5%; background: var(--light); }
+  .openings-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
+  .openings-count { background: var(--saffron); color: white; padding: 0.25rem 0.8rem; border-radius: 50px; font-size: 0.8rem; font-weight: 800; display: inline-block; margin-left: 0.5rem; }
+  #jobs-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
+  .job-card { background: white; border-radius: 16px; padding: 1.8rem; border: 1px solid var(--border); box-shadow: 0 2px 12px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
+  .job-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--saffron); }
+  .job-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .job-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+  .job-badge { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.7rem; border-radius: 50px; }
+  .job-badge.africa { background: #FFF3E0; color: #E65100; }
+  .job-badge.jamaica { background: #E8F5E9; color: #1B5E20; }
+  .job-badge.both { background: #EDE7F6; color: #4527A0; }
+  .job-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .job-company { font-size: 0.85rem; color: var(--gray); font-weight: 600; margin-bottom: 0.8rem; }
+  .job-details { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+  .job-detail { font-size: 0.78rem; color: var(--deep); background: var(--light); padding: 0.25rem 0.7rem; border-radius: 50px; font-weight: 600; }
+  .job-detail.salary { background: #E8F5E9; color: var(--green-dark); }
+  .job-apply { width: 100%; padding: 0.7rem; border-radius: 50px; border: 2px solid var(--saffron); background: transparent; color: var(--saffron); font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.88rem; cursor: pointer; transition: all 0.25s; }
+  .job-apply:hover { background: var(--saffron); color: white; }
+  .jobs-loading { grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--gray); font-size: 0.95rem; }
+  .jobs-error { grid-column: 1/-1; text-align: center; padding: 3rem; color: #c0392b; background: #FEE2E2; border-radius: 12px; font-size: 0.95rem; }
+  .no-jobs { grid-column: 1/-1; text-align: center; padding: 4rem 2rem; color: var(--gray); font-size: 1rem; }
+  .no-jobs .emoji { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+  .apply-section { padding: 6rem 5%; background: var(--cream); }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; max-width: 700px; }
+  .form-grid .full { grid-column: 1/-1; }
+  .form-group label { font-size: 0.82rem; font-weight: 700; color: var(--deep); display: block; margin-bottom: 0.4rem; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 0.92rem; color: var(--deep); background: white; transition: border-color 0.2s; outline: none; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--saffron); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .submit-btn { margin-top: 1rem; padding: 0.9rem 2.5rem; background: var(--saffron); color: white; border: none; border-radius: 50px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem; cursor: pointer; transition: all 0.25s; }
+  .submit-btn:hover { background: var(--saffron-light); transform: translateY(-2px); }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  #form-success { display: none; background: #E8F5E9; border: 1px solid #A5D6A7; border-radius: 12px; padding: 1rem 1.5rem; color: var(--green-dark); font-weight: 700; margin-top: 1rem; }
+  #form-error { display: none; background: #FEE2E2; border: 1px solid #FCA5A5; border-radius: 12px; padding: 1rem 1.5rem; color: #c0392b; font-weight: 700; margin-top: 1rem; }
+
+  footer { background: var(--deep); color: rgba(255,255,255,0.7); padding: 4rem 5% 2rem; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+  .footer-brand-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: white; font-weight: 700; margin-bottom: 0.5rem; }
+  .footer-brand-name span { color: var(--saffron); }
+  .footer-desc { font-size: 0.88rem; line-height: 1.7; }
+  .footer-heading { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--saffron); margin-bottom: 1rem; display: block; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.6rem; }
+  .footer-links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.88rem; transition: color 0.2s; }
+  .footer-links a:hover { color: white; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; font-size: 0.8rem; }
+  .admin-link { color: rgba(255,255,255,0.3); text-decoration: none; font-size: 0.75rem; transition: color 0.2s; }
+  .admin-link:hover { color: var(--saffron); }
+
+  /* ADMIN PANEL */
+  #admin-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); }
+  #admin-panel { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 20px; width: 90%; max-width: 700px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+  .admin-header { background: linear-gradient(135deg, var(--navy), #1a3a2a); padding: 1.5rem 2rem; border-radius: 20px 20px 0 0; display: flex; justify-content: space-between; align-items: center; }
+  .admin-header h2 { color: white; font-family: 'Playfair Display', serif; font-size: 1.4rem; }
+  .admin-header span { color: rgba(255,255,255,0.6); font-size: 0.8rem; }
+  .close-btn { background: rgba(255,255,255,0.15); border: none; color: white; width: 36px; height: 36px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
+  .close-btn:hover { background: rgba(255,255,255,0.3); }
+  .admin-body { padding: 2rem; }
+  #login-view {}
+  .login-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 0.4rem; }
+  .login-sub { color: var(--gray); font-size: 0.88rem; margin-bottom: 2rem; }
+  .admin-input-group { margin-bottom: 1rem; }
+  .admin-input-group label { font-size: 0.82rem; font-weight: 700; display: block; margin-bottom: 0.4rem; }
+  .admin-input-group input { width: 100%; padding: 0.75rem 1rem; border: 2px solid var(--border); border-radius: 10px; font-family: 'Nunito', sans-serif; font-size: 0.92rem; outline: none; transition: border-color 0.2s; }
+  .admin-input-group input:focus { border-color: var(--saffron); }
+  .login-btn { width: 100%; padding: 0.85rem; background: var(--saffron); color: white; border: none; border-radius: 50px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.95rem; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
+  .login-btn:hover { background: var(--saffron-light); }
+  .login-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .login-error { display: none; color: #c0392b; font-size: 0.82rem; margin-top: 0.5rem; font-weight: 600; }
+  #dashboard-view { display: none; }
+  .admin-tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .admin-tab { padding: 0.5rem 1.2rem; border-radius: 50px; border: 2px solid var(--border); background: white; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; color: var(--gray); }
+  .admin-tab.active { background: var(--saffron); color: white; border-color: var(--saffron); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* Stats bar */
+  .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; margin-bottom: 1.5rem; }
+  .stat-box { background: var(--light); border-radius: 10px; padding: 0.9rem; text-align: center; }
+  .stat-num { font-size: 1.5rem; font-weight: 900; color: var(--saffron); display: block; }
+  .stat-label { font-size: 0.7rem; color: var(--gray); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .admin-form { display: grid; gap: 0.9rem; }
+  .admin-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+  .admin-form-group label { font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 0.3rem; color: var(--deep); }
+  .admin-form-group input, .admin-form-group select, .admin-form-group textarea { width: 100%; padding: 0.65rem 0.9rem; border: 2px solid var(--border); border-radius: 8px; font-family: 'Nunito', sans-serif; font-size: 0.88rem; outline: none; transition: border-color 0.2s; }
+  .admin-form-group input:focus, .admin-form-group select:focus, .admin-form-group textarea:focus { border-color: var(--saffron); }
+  .admin-form-group textarea { min-height: 80px; resize: vertical; }
+  .post-btn { padding: 0.8rem 2rem; background: var(--green); color: white; border: none; border-radius: 50px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.92rem; cursor: pointer; transition: background 0.2s; margin-top: 0.5rem; }
+  .post-btn:hover { background: var(--green-dark); }
+  .post-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .post-success { display: none; color: var(--green-dark); background: #E8F5E9; padding: 0.7rem 1rem; border-radius: 8px; font-weight: 700; font-size: 0.85rem; margin-top: 0.5rem; }
+  .post-err { display: none; color: #c0392b; background: #FEE2E2; padding: 0.7rem 1rem; border-radius: 8px; font-weight: 700; font-size: 0.85rem; margin-top: 0.5rem; }
+
+  .admin-job-list { display: flex; flex-direction: column; gap: 0.8rem; }
+  .admin-job-item { border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .admin-job-info .aji-title { font-weight: 800; font-size: 0.95rem; }
+  .admin-job-info .aji-meta { font-size: 0.78rem; color: var(--gray); margin-top: 0.2rem; }
+  .delete-btn { background: #FEE2E2; color: #DC2626; border: none; padding: 0.4rem 1rem; border-radius: 50px; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.78rem; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+  .delete-btn:hover { background: #FECACA; }
+  .no-jobs-admin { color: var(--gray); font-size: 0.9rem; text-align: center; padding: 2rem; }
+
+  .applicants-list { display: flex; flex-direction: column; gap: 0.8rem; }
+  .applicant-item { border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.2rem; }
+  .applicant-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem; }
+  .applicant-name { font-weight: 800; font-size: 0.95rem; }
+  .applicant-meta { font-size: 0.78rem; color: var(--gray); line-height: 1.6; }
+  .applicant-meta span { display: inline-block; margin-right: 1rem; }
+  .status-select { font-family: 'Nunito', sans-serif; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 50px; border: 1.5px solid var(--border); cursor: pointer; outline: none; }
+  .status-new { background: #EDE7F6; color: #4527A0; border-color: #B39DDB; }
+  .status-contacted { background: #FFF3E0; color: #E65100; border-color: #FFCC80; }
+  .status-placed { background: #E8F5E9; color: #1B5E20; border-color: #A5D6A7; }
+  .status-rejected { background: #FEE2E2; color: #c0392b; border-color: #FCA5A5; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 700px) {
+    .ps-grid, .footer-grid, .admin-row, .form-grid, .stats-bar { grid-template-columns: 1fr; }
+    .form-grid .full { grid-column: 1; }
+    .nav-links { display: none; }
+    .hero-trust { gap: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">✈️</div>
+    <div>
+      <div class="nav-logo-text">Global<span>Careers</span></div>
+      <span class="nav-logo-sub">India's Overseas Placement Partner</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#openings">Open Jobs</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#why-us">Why Us</a></li>
+    <li><a href="#apply">Apply Now</a></li>
+  </ul>
+  <a href="#apply" class="nav-btn">🚀 Apply Now</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">100% Verified Vacancies · Complete Visa Support</div>
+    <h1 class="hero-title">
+      Get Your <span class="accent">Dream Job Abroad</span> –<br>
+      Secure Your Future in<br>
+      <span class="green">Africa & Jamaica!</span>
+    </h1>
+    <p class="hero-sub">Join 1,000+ Indians Working Happily Overseas. We handle the paperwork, you focus on the flight.</p>
+    <div class="hero-pills">
+      <span class="pill orange">No Hidden Charges</span>
+      <span class="pill">Direct Placements</span>
+      <span class="pill">Visa Assistance</span>
+      <span class="pill orange">High Paying Roles</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#openings" class="btn-big primary">🔍 View Open Jobs</a>
+      <a href="#apply" class="btn-big outline">📋 Register Now</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><span class="trust-num">1000+</span><span class="trust-label">Happy Placements</span></div>
+      <div class="trust-item"><span class="trust-num">15+</span><span class="trust-label">Countries Covered</span></div>
+      <div class="trust-item"><span class="trust-num">100%</span><span class="trust-label">Verified Jobs</span></div>
+      <div class="trust-item"><span class="trust-num">₹0</span><span class="trust-label">Hidden Charges</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ps-section reveal">
+  <span class="section-tag">Why Go Abroad?</span>
+  <h2 class="section-title">We Understand Your Struggle</h2>
+  <div class="ps-grid">
+    <div class="ps-card problem">
+      <span class="ps-icon">😔</span>
+      <h3 class="ps-card-title">The Problem</h3>
+      <p>Tired of low salaries and limited growth in India?</p>
+      <ul class="ps-list">
+        <li>Low salaries despite hard work</li>
+        <li>Limited career growth opportunities</li>
+        <li>Job insecurity in local market</li>
+        <li>Unable to support your family properly</li>
+      </ul>
+    </div>
+    <div class="ps-card solution">
+      <span class="ps-icon">🌍</span>
+      <h3 class="ps-card-title">The Solution</h3>
+      <p>We connect skilled Indian workers with high-paying roles across Africa & Jamaica.</p>
+      <ul class="ps-list">
+        <li>3–5x higher salaries than India</li>
+        <li>Accommodation & food often included</li>
+        <li>Full visa & document support</li>
+        <li>Join our community of 1000+ happy Indians abroad</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="industries reveal" id="industries">
+  <span class="section-tag">Sectors We Place In</span>
+  <h2 class="section-title">Industries We Serve</h2>
+  <div class="industries-grid">
+    <div class="industry-card"><span class="ic-icon">✈️</span><span class="ic-name">Travel Agencies</span></div>
+    <div class="industry-card"><span class="ic-icon">🛒</span><span class="ic-name">Megamarts</span></div>
+    <div class="industry-card"><span class="ic-icon">🔧</span><span class="ic-name">Hardware</span></div>
+    <div class="industry-card"><span class="ic-icon">🏪</span><span class="ic-name">Retail Showrooms</span></div>
+    <div class="industry-card"><span class="ic-icon">📦</span><span class="ic-name">Wholesale</span></div>
+    <div class="industry-card"><span class="ic-icon">🏗️</span><span class="ic-name">Construction</span></div>
+  </div>
+</section>
+
+<section class="why-us reveal" id="why-us">
+  <span class="section-tag" style="color:#4DD9AC">Why Choose Us?</span>
+  <h2 class="section-title" style="color:white">We Handle Everything. <span>You Just Fly.</span></h2>
+  <div class="why-grid">
+    <div class="why-card"><span class="why-icon">📄</span><div class="why-title">We Handle the Paperwork</div><div class="why-desc">Visa applications, work permits, attestations — all done by our expert team. Zero hassle for you.</div></div>
+    <div class="why-card"><span class="why-icon">✅</span><div class="why-title">100% Verified Vacancies</div><div class="why-desc">Every job is verified directly with the employer. No fake offers, no scams — guaranteed.</div></div>
+    <div class="why-card"><span class="why-icon">💰</span><div class="why-title">No Hidden Charges</div><div class="why-desc">Transparent fees. What we quote is what you pay. No surprise costs at any stage.</div></div>
+    <div class="why-card"><span class="why-icon">🤝</span><div class="why-title">Direct Placements</div><div class="why-desc">We place you directly with the employer. No middlemen, faster onboarding, better pay.</div></div>
+    <div class="why-card"><span class="why-icon">🌐</span><div class="why-title">Post-Arrival Support</div><div class="why-desc">Our team stays in touch even after you land. We're here for you at every step abroad.</div></div>
+    <div class="why-card"><span class="why-icon">🇮🇳</span><div class="why-title">Trusted by Indians</div><div class="why-desc">1000+ successful placements from India. We understand your needs, culture, and concerns.</div></div>
+  </div>
+</section>
+
+<section class="openings reveal" id="openings">
+  <div class="openings-header">
+    <div>
+      <span class="section-tag">Live Vacancies</span>
+      <h2 class="section-title">Current Openings <span class="openings-count" id="job-count">…</span></h2>
+    </div>
+    <a href="#apply" class="btn-big primary" style="font-size:0.88rem; padding:0.7rem 1.6rem;">Apply for Any Role →</a>
+  </div>
+  <div id="jobs-container">
+    <div class="jobs-loading">⏳ Loading live vacancies…</div>
+  </div>
+</section>
+
+<section class="apply-section reveal" id="apply">
+  <span class="section-tag">Register Today</span>
+  <h2 class="section-title">Apply for a Job Abroad</h2>
+  <p style="color:var(--gray); margin-top:0.5rem; font-size:0.95rem;">Fill in your details and our team will contact you within 24 hours.</p>
+  <form id="apply-form" onsubmit="submitApplication(event)">
+    <div class="form-grid">
+      <div class="form-group"><label>Full Name *</label><input type="text" id="app-name" placeholder="Your full name" required></div>
+      <div class="form-group"><label>Phone Number *</label><input type="tel" id="app-phone" placeholder="+91 XXXXX XXXXX" required></div>
+      <div class="form-group"><label>Email Address</label><input type="email" id="app-email" placeholder="your@email.com"></div>
+      <div class="form-group"><label>City / State</label><input type="text" id="app-city" placeholder="Mumbai, Maharashtra"></div>
+      <div class="form-group full"><label>Preferred Destination</label>
+        <select id="app-dest">
+          <option value="">Select destination</option>
+          <option>Africa</option><option>Jamaica</option><option>Both (Open to either)</option>
+        </select>
+      </div>
+      <div class="form-group full"><label>Industry / Type of Work</label>
+        <select id="app-industry">
+          <option value="">Select industry</option>
+          <option>Travel Agency</option><option>Megamart / Retail</option><option>Hardware</option>
+          <option>Wholesale</option><option>Construction</option><option>Any / Open to all</option>
+        </select>
+      </div>
+      <div class="form-group full"><label>Brief About Yourself / Experience</label>
+        <textarea id="app-message" placeholder="Tell us about your experience, skills, years of work..."></textarea>
+      </div>
+    </div>
+    <button type="submit" class="submit-btn" id="submit-btn">🚀 Submit Application</button>
+    <div id="form-success">✅ Application received! Our team will call you within 24 hours.</div>
+    <div id="form-error">❌ Submission failed. Please try again or call us directly.</div>
+  </form>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Global<span>Careers</span> India</div>
+      <p class="footer-desc">India's trusted overseas placement partner. Connecting skilled Indian workers with high-paying jobs in Africa & Jamaica since 2010.</p>
+    </div>
+    <div>
+      <span class="footer-heading">Quick Links</span>
+      <ul class="footer-links">
+        <li><a href="#openings">Open Jobs</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#apply">Apply Now</a></li>
+      </ul>
+    </div>
+    <div>
+      <span class="footer-heading">Contact Us</span>
+      <ul class="footer-links">
+        <li><a href="#">📞 +91 98765 43210</a></li>
+        <li><a href="#">📧 info@globalcareers.in</a></li>
+        <li><a href="#">📍 New Delhi, India</a></li>
+        <li><a href="#">🕐 Mon–Sat, 9am–6pm</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 GlobalCareers India. All rights reserved.</span>
+    <a href="#" class="admin-link" onclick="openAdmin(); return false;">⚙ Admin Panel</a>
+  </div>
+</footer>
+
+<!-- ADMIN PANEL -->
+<div id="admin-overlay" onclick="closeAdminOnOverlay(event)">
+  <div id="admin-panel">
+    <div class="admin-header">
+      <div><h2>⚙ Admin Panel</h2><span>GlobalCareers India — Job Management</span></div>
+      <button class="close-btn" onclick="closeAdmin()">✕</button>
+    </div>
+    <div class="admin-body">
+      <div id="login-view">
+        <div class="login-title">Admin Login</div>
+        <div class="login-sub">Enter your credentials to manage job postings.</div>
+        <div class="admin-input-group"><label>Username</label><input type="text" id="admin-user" placeholder="admin"></div>
+        <div class="admin-input-group"><label>Password</label><input type="password" id="admin-pass" placeholder="••••••••" onkeypress="if(event.key==='Enter')doLogin()"></div>
+        <button class="login-btn" id="login-btn" onclick="doLogin()">Login →</button>
+        <div class="login-error" id="login-error">❌ Incorrect username or password.</div>
+      </div>
+
+      <div id="dashboard-view">
+        <div class="stats-bar" id="stats-bar">
+          <div class="stat-box"><span class="stat-num" id="s-jobs">–</span><span class="stat-label">Active Jobs</span></div>
+          <div class="stat-box"><span class="stat-num" id="s-total">–</span><span class="stat-label">Applicants</span></div>
+          <div class="stat-box"><span class="stat-num" id="s-new">–</span><span class="stat-label">New</span></div>
+          <div class="stat-box"><span class="stat-num" id="s-placed">–</span><span class="stat-label">Placed</span></div>
+        </div>
+
+        <div class="admin-tabs">
+          <button class="admin-tab active" onclick="switchTab('post',this)">➕ Post a Job</button>
+          <button class="admin-tab" onclick="switchTab('manage',this)">📋 Manage Jobs</button>
+          <button class="admin-tab" onclick="switchTab('applicants',this)">👥 Applicants</button>
+        </div>
+
+        <div class="tab-content active" id="tab-post">
+          <div class="admin-form">
+            <div class="admin-row">
+              <div class="admin-form-group"><label>Job Title *</label><input type="text" id="j-title" placeholder="e.g. Sales Executive"></div>
+              <div class="admin-form-group"><label>Company / Employer *</label><input type="text" id="j-company" placeholder="e.g. FreshMart Superstore"></div>
+            </div>
+            <div class="admin-row">
+              <div class="admin-form-group"><label>Location *</label><input type="text" id="j-location" placeholder="e.g. Nairobi, Kenya"></div>
+              <div class="admin-form-group"><label>Destination</label>
+                <select id="j-dest"><option value="africa">Africa</option><option value="jamaica">Jamaica</option><option value="both">Both</option></select>
+              </div>
+            </div>
+            <div class="admin-row">
+              <div class="admin-form-group"><label>Salary</label><input type="text" id="j-salary" placeholder="$800–1,000/month"></div>
+              <div class="admin-form-group"><label>Industry</label>
+                <select id="j-industry"><option>Travel Agency</option><option>Megamart / Retail</option><option>Hardware</option><option>Wholesale</option><option>Construction</option><option>Other</option></select>
+              </div>
+            </div>
+            <div class="admin-form-group"><label>Job Description / Requirements</label><textarea id="j-desc" placeholder="Key responsibilities, qualifications, benefits..."></textarea></div>
+            <div class="admin-row">
+              <div class="admin-form-group"><label>Openings (vacancies)</label><input type="number" id="j-openings" placeholder="e.g. 5" min="1"></div>
+              <div class="admin-form-group"><label>Experience Required</label><input type="text" id="j-exp" placeholder="e.g. 1–3 years"></div>
+            </div>
+            <button class="post-btn" id="post-btn" onclick="postJob()">✅ Post Job to Website</button>
+            <div class="post-success" id="post-success">🎉 Job posted successfully! Visible on website now.</div>
+            <div class="post-err" id="post-err">❌ Failed to post job. Please try again.</div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-manage">
+          <div class="admin-job-list" id="admin-job-list"><div class="no-jobs-admin">Loading…</div></div>
+        </div>
+
+        <div class="tab-content" id="tab-applicants">
+          <div class="applicants-list" id="applicants-list"><div class="no-jobs-admin">Loading…</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── CONFIG ──
+  // Change this to your deployed backend URL in production
+  const API = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:3000/api'
+    : '/api'; // same-origin when deployed together
+
+  let authToken = sessionStorage.getItem('gc_token') || null;
+
+  // ── HELPERS ──
+  async function apiFetch(path, opts = {}) {
+    const headers = { 'Content-Type': 'application/json', ...(opts.headers || {}) };
+    if (authToken) headers['Authorization'] = `Bearer ${authToken}`;
+    const res = await fetch(API + path, { ...opts, headers });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Request failed');
+    return data;
+  }
+
+  // ── LOAD JOBS (PUBLIC) ──
+  async function loadJobs() {
+    const container = document.getElementById('jobs-container');
+    const countEl = document.getElementById('job-count');
+    try {
+      const data = await apiFetch('/jobs');
+      countEl.textContent = data.count;
+      if (data.jobs.length === 0) {
+        container.innerHTML = `<div class="no-jobs"><span class="emoji">📋</span>New openings being added. Register below to get notified!</div>`;
+        return;
+      }
+      container.innerHTML = data.jobs.map(job => `
+        <div class="job-card">
+          <div class="job-top">
+            <div>
+              <div class="job-title">${esc(job.title)}</div>
+              <div class="job-company">🏢 ${esc(job.company)}</div>
+            </div>
+            <span class="job-badge ${job.destination}">${job.destination === 'both' ? 'Africa & Jamaica' : cap(job.destination)}</span>
+          </div>
+          <div class="job-details">
+            <span class="job-detail">📍 ${esc(job.location)}</span>
+            ${job.industry ? `<span class="job-detail">🏭 ${esc(job.industry)}</span>` : ''}
+            ${job.salary ? `<span class="job-detail salary">💰 ${esc(job.salary)}</span>` : ''}
+            ${job.openings ? `<span class="job-detail">👤 ${job.openings} opening${job.openings>1?'s':''}</span>` : ''}
+            ${job.experience ? `<span class="job-detail">⏳ ${esc(job.experience)}</span>` : ''}
+          </div>
+          ${job.description ? `<p style="font-size:0.85rem;color:var(--gray);margin-bottom:1rem;line-height:1.5">${esc(job.description).substring(0,120)}${job.description.length>120?'…':''}</p>` : ''}
+          <button class="job-apply" onclick="applyForJob('${esc(job.title)}')">Apply for this Role →</button>
+        </div>
+      `).join('');
+    } catch (e) {
+      countEl.textContent = '!';
+      container.innerHTML = `<div class="jobs-error">⚠️ Could not load jobs. Make sure the backend server is running.<br><small style="opacity:0.7">${e.message}</small></div>`;
+    }
+  }
+
+  function applyForJob(title) {
+    document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('app-message').placeholder = `I am interested in the ${title} position...`;
+  }
+
+  // ── SUBMIT APPLICATION ──
+  async function submitApplication(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true; btn.textContent = '⏳ Submitting…';
+    document.getElementById('form-success').style.display = 'none';
+    document.getElementById('form-error').style.display = 'none';
+    try {
+      await apiFetch('/apply', {
+        method: 'POST',
+        body: JSON.stringify({
+          name:        document.getElementById('app-name').value,
+          phone:       document.getElementById('app-phone').value,
+          email:       document.getElementById('app-email').value,
+          city:        document.getElementById('app-city').value,
+          destination: document.getElementById('app-dest').value,
+          industry:    document.getElementById('app-industry').value,
+          message:     document.getElementById('app-message').value,
+        })
+      });
+      document.getElementById('form-success').style.display = 'block';
+      document.getElementById('apply-form').reset();
+    } catch {
+      document.getElementById('form-error').style.display = 'block';
+    } finally {
+      btn.disabled = false; btn.textContent = '🚀 Submit Application';
+    }
+  }
+
+  // ── ADMIN PANEL ──
+  function openAdmin() {
+    document.getElementById('admin-overlay').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    if (authToken) showDashboard();
+  }
+  function closeAdmin() {
+    document.getElementById('admin-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  function closeAdminOnOverlay(e) { if (e.target === document.getElementById('admin-overlay')) closeAdmin(); }
+
+  async function doLogin() {
+    const btn = document.getElementById('login-btn');
+    btn.disabled = true; btn.textContent = 'Logging in…';
+    document.getElementById('login-error').style.display = 'none';
+    try {
+      const data = await apiFetch('/admin/login', {
+        method: 'POST',
+        body: JSON.stringify({
+          username: document.getElementById('admin-user').value,
+          password: document.getElementById('admin-pass').value,
+        })
+      });
+      authToken = data.token;
+      sessionStorage.setItem('gc_token', authToken);
+      showDashboard();
+    } catch {
+      document.getElementById('login-error').style.display = 'block';
+    } finally {
+      btn.disabled = false; btn.textContent = 'Login →';
+    }
+  }
+
+  async function showDashboard() {
+    document.getElementById('login-view').style.display = 'none';
+    document.getElementById('dashboard-view').style.display = 'block';
+    loadStats();
+    loadAdminJobs();
+    loadApplicants();
+  }
+
+  async function loadStats() {
+    try {
+      const { stats } = await apiFetch('/admin/stats');
+      document.getElementById('s-jobs').textContent = stats.totalJobs;
+      document.getElementById('s-total').textContent = stats.totalApplicants;
+      document.getElementById('s-new').textContent = stats.newApplicants;
+      document.getElementById('s-placed').textContent = stats.placed;
+    } catch {}
+  }
+
+  function switchTab(tab, el) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + tab).classList.add('active');
+    el.classList.add('active');
+  }
+
+  async function postJob() {
+    const title    = document.getElementById('j-title').value.trim();
+    const company  = document.getElementById('j-company').value.trim();
+    const location = document.getElementById('j-location').value.trim();
+    if (!title || !company || !location) { alert('Please fill in Job Title, Company, and Location.'); return; }
+
+    const btn = document.getElementById('post-btn');
+    btn.disabled = true; btn.textContent = '⏳ Posting…';
+    document.getElementById('post-success').style.display = 'none';
+    document.getElementById('post-err').style.display = 'none';
+
+    try {
+      await apiFetch('/admin/jobs', {
+        method: 'POST',
+        body: JSON.stringify({
+          title, company, location,
+          destination: document.getElementById('j-dest').value,
+          salary:      document.getElementById('j-salary').value.trim(),
+          industry:    document.getElementById('j-industry').value,
+          description: document.getElementById('j-desc').value.trim(),
+          openings:    parseInt(document.getElementById('j-openings').value) || 1,
+          experience:  document.getElementById('j-exp').value.trim(),
+        })
+      });
+      document.getElementById('post-success').style.display = 'block';
+      ['j-title','j-company','j-location','j-salary','j-desc','j-openings','j-exp'].forEach(id => document.getElementById(id).value = '');
+      loadJobs();
+      loadAdminJobs();
+      loadStats();
+    } catch {
+      document.getElementById('post-err').style.display = 'block';
+    } finally {
+      btn.disabled = false; btn.textContent = '✅ Post Job to Website';
+    }
+  }
+
+  async function loadAdminJobs() {
+    const list = document.getElementById('admin-job-list');
+    try {
+      const data = await apiFetch('/admin/jobs');
+      const active = data.jobs.filter(j => j.is_active);
+      if (active.length === 0) { list.innerHTML = '<div class="no-jobs-admin">No jobs posted yet.</div>'; return; }
+      list.innerHTML = active.map(job => `
+        <div class="admin-job-item">
+          <div class="admin-job-info">
+            <div class="aji-title">${esc(job.title)}</div>
+            <div class="aji-meta">${esc(job.company)} · ${esc(job.location)} · ${job.created_at ? job.created_at.split('T')[0] : ''}</div>
+          </div>
+          <button class="delete-btn" onclick="deleteJob(${job.id})">🗑 Delete</button>
+        </div>
+      `).join('');
+    } catch { list.innerHTML = '<div class="no-jobs-admin">Failed to load jobs.</div>'; }
+  }
+
+  async function deleteJob(id) {
+    if (!confirm('Delete this job posting?')) return;
+    try {
+      await apiFetch(`/admin/jobs/${id}`, { method: 'DELETE' });
+      loadJobs(); loadAdminJobs(); loadStats();
+    } catch { alert('Failed to delete job.'); }
+  }
+
+  async function loadApplicants() {
+    const list = document.getElementById('applicants-list');
+    try {
+      const data = await apiFetch('/admin/applicants');
+      if (data.applicants.length === 0) { list.innerHTML = '<div class="no-jobs-admin">No applications yet.</div>'; return; }
+      list.innerHTML = data.applicants.map(a => `
+        <div class="applicant-item">
+          <div class="applicant-top">
+            <div class="applicant-name">${esc(a.name)}</div>
+            <select class="status-select status-${a.status}" onchange="updateStatus(${a.id}, this)">
+              <option value="new"       ${a.status==='new'       ?'selected':''}>🆕 New</option>
+              <option value="contacted" ${a.status==='contacted' ?'selected':''}>📞 Contacted</option>
+              <option value="placed"    ${a.status==='placed'    ?'selected':''}>✅ Placed</option>
+              <option value="rejected"  ${a.status==='rejected'  ?'selected':''}>❌ Rejected</option>
+            </select>
+          </div>
+          <div class="applicant-meta">
+            <span>📞 ${esc(a.phone)}</span>
+            ${a.email ? `<span>📧 ${esc(a.email)}</span>` : ''}
+            ${a.city  ? `<span>📍 ${esc(a.city)}</span>`  : ''}
+            <span>🌍 ${a.destination || '—'}</span>
+            <span>🏭 ${a.industry    || '—'}</span>
+            <span>📅 ${a.created_at ? a.created_at.split('T')[0] : ''}</span>
+          </div>
+          ${a.message ? `<p style="font-size:0.8rem;color:var(--gray);margin-top:0.5rem;line-height:1.4">${esc(a.message)}</p>` : ''}
+        </div>
+      `).join('');
+    } catch { list.innerHTML = '<div class="no-jobs-admin">Failed to load applicants.</div>'; }
+  }
+
+  async function updateStatus(id, sel) {
+    const status = sel.value;
+    sel.className = `status-select status-${status}`;
+    try {
+      await apiFetch(`/admin/applicants/${id}/status`, {
+        method: 'PATCH',
+        body: JSON.stringify({ status })
+      });
+      loadStats();
+    } catch { alert('Failed to update status.'); }
+  }
+
+  // ── UTILS ──
+  function esc(str) {
+    if (!str) return '';
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function cap(str) { return str ? str.charAt(0).toUpperCase() + str.slice(1) : ''; }
+
+  // ── SCROLL REVEAL ──
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+
+  // ── INIT ──
+  loadJobs();
+</script>
+</body>
+</html>
