@@ -16,7 +16,7 @@ app.use(cors({ origin: '*' }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ── SIMPLE JSON DATABASE (no external library needed) ──
+// ── SIMPLE JSON DATABASE ──
 function readDB() {
   if (!fs.existsSync(DB_FILE)) {
     const defaultData = {
@@ -58,7 +58,6 @@ function now() {
 //  PUBLIC ROUTES
 // ═══════════════════════════════════
 
-// GET /api/jobs
 app.get('/api/jobs', (req, res) => {
   const db = readDB();
   let jobs = db.jobs.filter(j => j.is_active);
@@ -68,7 +67,6 @@ app.get('/api/jobs', (req, res) => {
   res.json({ success: true, count: jobs.length, jobs });
 });
 
-// GET /api/jobs/:id
 app.get('/api/jobs/:id', (req, res) => {
   const db = readDB();
   const job = db.jobs.find(j => j.id === +req.params.id && j.is_active);
@@ -76,13 +74,12 @@ app.get('/api/jobs/:id', (req, res) => {
   res.json({ success: true, job });
 });
 
-// POST /api/apply
 app.post('/api/apply', (req, res) => {
   const { name, phone, email, city, destination, industry, message } = req.body;
   if (!name || !phone) return res.status(400).json({ error: 'Name and phone are required' });
   const db = readDB();
   const applicant = {
-    id: nextId(db.applicants),
+    id:          nextId(db.applicants),
     name, phone,
     email:       email       || null,
     city:        city        || null,
@@ -101,7 +98,6 @@ app.post('/api/apply', (req, res) => {
 //  ADMIN AUTH
 // ═══════════════════════════════════
 
-// POST /api/admin/login
 app.post('/api/admin/login', (req, res) => {
   const db = readDB();
   const { username, password } = req.body;
@@ -117,14 +113,12 @@ app.post('/api/admin/login', (req, res) => {
 //  ADMIN PROTECTED ROUTES
 // ═══════════════════════════════════
 
-// GET /api/admin/jobs
 app.get('/api/admin/jobs', requireAuth, (req, res) => {
   const db = readDB();
   const jobs = [...db.jobs].sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
   res.json({ success: true, count: jobs.length, jobs });
 });
 
-// POST /api/admin/jobs
 app.post('/api/admin/jobs', requireAuth, (req, res) => {
   const { title, company, location, destination, salary, industry, description, openings, experience } = req.body;
   if (!title || !company || !location) return res.status(400).json({ error: 'Title, company, and location are required' });
@@ -146,7 +140,6 @@ app.post('/api/admin/jobs', requireAuth, (req, res) => {
   res.status(201).json({ success: true, job });
 });
 
-// DELETE /api/admin/jobs/:id
 app.delete('/api/admin/jobs/:id', requireAuth, (req, res) => {
   const db = readDB();
   const job = db.jobs.find(j => j.id === +req.params.id);
@@ -156,7 +149,6 @@ app.delete('/api/admin/jobs/:id', requireAuth, (req, res) => {
   res.json({ success: true, message: 'Job removed' });
 });
 
-// GET /api/admin/applicants
 app.get('/api/admin/applicants', requireAuth, (req, res) => {
   const db = readDB();
   let applicants = [...db.applicants];
@@ -165,7 +157,6 @@ app.get('/api/admin/applicants', requireAuth, (req, res) => {
   res.json({ success: true, count: applicants.length, applicants });
 });
 
-// PATCH /api/admin/applicants/:id/status
 app.patch('/api/admin/applicants/:id/status', requireAuth, (req, res) => {
   const { status } = req.body;
   const valid = ['new', 'contacted', 'placed', 'rejected'];
@@ -178,7 +169,6 @@ app.patch('/api/admin/applicants/:id/status', requireAuth, (req, res) => {
   res.json({ success: true, message: `Status updated to "${status}"` });
 });
 
-// GET /api/admin/stats
 app.get('/api/admin/stats', requireAuth, (req, res) => {
   const db = readDB();
   res.json({
@@ -192,8 +182,13 @@ app.get('/api/admin/stats', requireAuth, (req, res) => {
   });
 });
 
+// ── SERVE FRONTEND FOR ALL OTHER ROUTES ──
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // ── START ──
-readDB(); // init db.json if it doesn't exist
+readDB();
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
   console.log(`👤 Admin login: admin / admin123`);
